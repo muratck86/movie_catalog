@@ -18,5 +18,8 @@ class Movie(models.Model):
     isReleased = models.BooleanField(default=True, verbose_name="Released")
     director = models.ForeignKey(Person, on_delete=models.DO_NOTHING)
 
+    def get_image_path(self):
+        return "/static/img/" + self.image
+
     def __str__(self):
         return f"{self.name} ({self.year})"
