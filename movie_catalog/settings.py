@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "movies", # we can add just folder name instead of movies.apps.MoviesConfig
     "pages.apps.PagesConfig", #the app works fine without this line, so why we add this?
     "django.contrib.admin",
     "django.contrib.auth",
