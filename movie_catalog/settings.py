@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles", # working with static files
+    "django.contrib.humanize" # converts texts to more readable and attractive. 
 ]
 
 MIDDLEWARE = [
