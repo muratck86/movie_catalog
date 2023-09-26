@@ -17,11 +17,11 @@
                     <div class="card mb-3">
                         <div class="row">
                             <div class="col-md-3">
-                                <img class="card-img" src="{{ movie.get_image_path }}" alt="">
+                                <a href="{% url 'details' movie.id %}""><img class="card-img" src="{{ movie.get_image_path }}" alt=""></a>
                             </div>
                             <div class="col-md-9">
                                 <div class="card-body">
-                                    <div class="card-title">{{ movie.name }} ({{ movie.year }})</div>
+                                    <div class="card-title"><a href="{% url 'details' movie.id %}">{{ movie.name }} ({{ movie.year }})</a></div>
                                     <p class="card-text">{{ movie.description }}</p>
                                     <p class="card-text">
                                         <small class="text-muted">Added {{ movie.created_date | timesince }} ago.</small>

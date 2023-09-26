@@ -20,6 +20,21 @@ class Movie(models.Model):
 
     def get_image_path(self):
         return "/static/img/" + self.image
-
+    
+    def convert_dur_to_hrs_mins(self):
+        st = ""
+        hrs = self.duration // 60
+        mins = self.duration % 60
+        if hrs == 1:
+            st += str(hrs) + " hr"
+        elif hrs > 1:
+            st += str(hrs) + " hrs"
+        
+        if mins == 1:
+            st += " " + str(mins) + " min"
+        elif mins > 1:
+            st += " " + str(mins) +  " mins"
+        return st
+    
     def __str__(self):
         return f"{self.name} ({self.year})"
